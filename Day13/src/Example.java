@@ -84,6 +84,7 @@ class Example {
 }        */
 
 //example 4
+/*
 class A{
     static{
         System.out.println("static block A");
@@ -110,5 +111,65 @@ class D extends B{
 class Example {
     public static void main(String[] args) {
         new B();
+    }
+}*/
+
+//Example 5
+/*
+class  A {
+    A(){
+        System.out.println("Super constructor");
+    }
+}
+class B extends A {
+   //compiler define super();
+}
+class Example{
+    public static void main(String[] args) {
+        new B();
+    }
+}
+*/
+
+//Example 5
+
+//super(); key word;
+
+class A{
+    A(){
+        System.out.println("A()");
+    }
+    A(int a){
+        System.out.println("A(int a)");
+    }
+    A(int a,int b){
+        System.out.println("A(int a,int b)");
+    }
+    A(int a,int b,int c){
+        System.out.println("A(int a,int b,int c)");
+    }
+
+}
+
+class B extends A{
+    int b;
+    B(){
+        System.out.println("B()");
+    }
+    B(int a){
+        System.out.println("B(int a)");
+    }
+    B(int a, int b){
+        System.out.println("B(int a,int b)");
+    }
+    B(int a,int b,int c){
+        super(); //super key word represent super class constructor
+        System.out.println("B(int a,int b,int c)");
+    }
+}
+
+class Example{
+    public static void main(String[] args) {
+        new B(12,15,40);
     }
 }
